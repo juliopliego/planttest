@@ -13,6 +13,7 @@ python data/download_dataset.py --slug spMohanty/plant-seedlings-classification 
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import zipfile
 from pathlib import Path
@@ -77,6 +78,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download a Kaggle dataset and extract it.")
     parser.add_argument("--slug", required=True, help="Kaggle dataset slug, e.g. spMohanty/plant-seedlings-classification")
     parser.add_argument("--out_dir", default="data/plant_dataset", help="Where to place the extracted dataset")
+    parser.add_argument("--username", help="Kaggle username (optional if ~/.kaggle/kaggle.json or env vars are set)")
+    parser.add_argument("--key", help="Kaggle API key (optional)")
 
     args = parser.parse_args()
+
+    # Inject credentials into env vars if provided so KaggleApi can pick them up
+    if args.username and args.key:
+        os.environ["KAGGLE_USERNAME"] = args.username
+        os.environ["KAGGLE_KEY"] = args.key
+
     download_and_extract(args.slug, Path(args.out_dir)) 
