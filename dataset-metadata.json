@@ -1,0 +1,37 @@
+{
+  "id": "authuria/inaturalist",
+  "id_no": 4400167,
+  "datasetSlugNullable": "inaturalist",
+  "ownerUserNullable": "authuria",
+  "usabilityRatingNullable": 0.1875,
+  "titleNullable": "iNaturalist",
+  "subtitleNullable": "",
+  "descriptionNullable": "",
+  "datasetId": 4400167,
+  "datasetSlug": "inaturalist",
+  "hasDatasetSlug": true,
+  "ownerUser": "authuria",
+  "hasOwnerUser": true,
+  "usabilityRating": 0.1875,
+  "hasUsabilityRating": true,
+  "totalViews": 546,
+  "totalVotes": 1,
+  "totalDownloads": 26,
+  "title": "iNaturalist",
+  "hasTitle": true,
+  "subtitle": "",
+  "hasSubtitle": true,
+  "description": "",
+  "hasDescription": true,
+  "isPrivate": false,
+  "keywords": [],
+  "licenses": [
+    {
+      "nameNullable": "unknown",
+      "name": "unknown",
+      "hasName": true
+    }
+  ],
+  "collaborators": [],
+  "data": []
+}
